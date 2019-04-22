@@ -379,6 +379,10 @@ namespace BeeSchema {
 						size = sb.Length;
 						return sb.ToString();
 					}
+				case NodeType.Guid:
+					size = 16;
+					// https://stackoverflow.com/questions/10190817/guid-byte-order-in-net
+					return new Guid(reader.ReadBytes(16));
 				case NodeType.IPAddress:
 					size = 4;
 					return new IPAddress(reader.ReadBytes(4));
