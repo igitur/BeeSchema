@@ -13,6 +13,8 @@ namespace BeeSchema {
 
 		Char, String,
 
+		Guid,
+
 		IPAddress, Epoch,
 
 		Array,
