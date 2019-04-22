@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeeSchema", "BeeSchema\BeeS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{EF52B64E-7CD0-472B-BCD9-8CDC2C11BEAC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeeSchema.Tests", "BeeSchema.Tests\BeeSchema.Tests.csproj", "{7EE7D314-2E60-458C-9D8D-34D50F8DAC5D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{EF52B64E-7CD0-472B-BCD9-8CDC2C11BEAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF52B64E-7CD0-472B-BCD9-8CDC2C11BEAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF52B64E-7CD0-472B-BCD9-8CDC2C11BEAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EE7D314-2E60-458C-9D8D-34D50F8DAC5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EE7D314-2E60-458C-9D8D-34D50F8DAC5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EE7D314-2E60-458C-9D8D-34D50F8DAC5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EE7D314-2E60-458C-9D8D-34D50F8DAC5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
