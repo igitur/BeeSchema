@@ -487,10 +487,11 @@ namespace BeeSchema {
 			Node child = null;
 
 			while ((token = lexer.NextToken()).Type != TokenType.CloseBrace) {
-				if ((token.Type == TokenType.LineComment || token.Type == TokenType.BlockComment)
-					&& child != null) {
-					child.Comment = token.Value;
-					child = null;
+				if (token.Type == TokenType.LineComment || token.Type == TokenType.BlockComment) {
+					if (child != null) {
+						child.Comment = token.Value;
+						child = null;
+					}
 					continue;
 				}
 
@@ -795,8 +796,19 @@ namespace BeeSchema {
 			var val = 0L;
 			token = lexer.NextToken();
 
+			Node child = null;
+
 			while (token.Type != TokenType.CloseBrace) {
-				var child = new Node();
+				if (token.Type == TokenType.LineComment || token.Type == TokenType.BlockComment) {
+					if (child != null) {
+						child.Comment = token.Value;
+						child = null;
+					}
+					token = lexer.NextToken();
+					continue;
+				}
+
+				child = new Node();
 				child.Type = type;
 
 				if (token.Type != TokenType.Word)
@@ -865,10 +877,11 @@ namespace BeeSchema {
 			Node child = null;
 
 			while ((token = lexer.NextToken()).Type != TokenType.CloseBrace) {
-				if ((token.Type == TokenType.LineComment || token.Type == TokenType.BlockComment)
-					&& child != null) {
-					child.Comment = token.Value;
-					child = null;
+				if (token.Type == TokenType.LineComment || token.Type == TokenType.BlockComment) {
+					if (child != null) {
+						child.Comment = token.Value;
+						child = null;
+					}
 					continue;
 				}
 
